@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/rakuten
-    username: roshan
-    password: Qwert1@
+    url: jdbc:mysql://mysqldb/bootdb
+    username: root
+    password: root
   application:
     name: CRUD-OP
   jpa:

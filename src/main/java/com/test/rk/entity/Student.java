@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -33,7 +34,7 @@ public class Student {
 	private String gaurdianName;
 	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER/*,mappedBy = "student"*/)
-//	@JoinTable(name ="stu_cou_ref",foreignKey ="course_id",inverseForeignKey = "student_id")
+//	@JoinTable(name ="stu_cou_ref",foreignKey ="stud_id",inverseForeignKey = "course_id")
 	private List<Course> course;
 	
 	@ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH},fetch = FetchType.EAGER)

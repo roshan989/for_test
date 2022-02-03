@@ -1,0 +1,9 @@
+com\test\rk\entity\Classes.class
+com\test\rk\dao\StudentDao.class
+com\test\rk\entity\Course.class
+com\test\rk\CrudOpApplication.class
+com\test\rk\dao\CourseDao.class
+com\test\rk\dao\ClassesDao.class
+com\test\rk\controller\StudentController.class
+com\test\rk\entity\Student.class
+com\test\rk\service\StudentService.class

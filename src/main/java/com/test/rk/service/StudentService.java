@@ -19,9 +19,7 @@ public class StudentService {
 	private StudentDao dao;
 	
 	public Student addStudent(Student student) {
-		log.debug("detching this data",student);
-	//	Course course = new Course();
-		
+		log.debug("detching this data",student);		
 		return dao.save(student);
 	}
 	
@@ -31,8 +29,18 @@ public class StudentService {
 	}
 
 	public int deleteStudent(int id) {
+		try {
 		dao.deleteById(id);
 		return 0;
+			
+		}catch(Exception e )
+		{
+			log.info(e.getMessage());
+			return 1;
+		}
+		finally {
+			log.info("done");
+		}
 	}
 	
 }

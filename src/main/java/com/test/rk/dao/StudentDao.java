@@ -11,7 +11,7 @@ import com.test.rk.entity.Student;
 @Repository
 public interface StudentDao extends JpaRepository<Student , Integer> {
 
-	@Query("select t from Student t where=:id")
+	@Query("select t from Student t where t.id=:id")
 	List<Student> findAllById(int id);
 	
 }
